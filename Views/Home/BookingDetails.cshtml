@@ -1,0 +1,55 @@
+﻿@model IEnumerable<KSBookingMVC.Models.BookingDetails>
+
+@{
+    ViewData["Title"] = "BookingDetails";
+}
+
+<h1>BookingDetails</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hotelname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Noofrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsersId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hotelname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Noofrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsersId)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

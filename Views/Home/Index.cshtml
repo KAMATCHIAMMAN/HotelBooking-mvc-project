@@ -1,0 +1,55 @@
+﻿@{
+
+    ViewData["Title"] = "";
+}
+
+<div class="video-background">
+    <video id="bg-video" loop autoplay muted>
+        <source src="@Url.Content("https://player.vimeo.com/external/409203683.sd.mp4?s=ec1a92b4713d1b59ea984f9a8de88ad48e01d1ac&profile_id=164&oauth2_token_id=57447761")" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="video-content">
+
+        <h1>Yaadhum Oore Yaavarum Kelir</h1>
+        <h1>
+            Make Your Journey Happy With Us
+        </h1>
+        <a class="btn btn-primary" asp-controller="Home" asp-action="Login" top=60%;>User</a>
+        <a class="btn btn-primary" asp-controller="Home" asp-action="AdminLogin">Admin</a>
+    </div>
+</div>
+
+<style>
+    .video-background {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 0;
+        margin:0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    .video-content {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        /* Additional styling for your content */
+    }
+    .btn btn-primary{
+         position: absolute;
+        top: 60%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+</style>

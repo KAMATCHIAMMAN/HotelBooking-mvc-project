@@ -1,0 +1,52 @@
+﻿<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .list {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .image {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .image img {
+            margin-bottom: 30px;
+        }
+</style>
+
+<div class="container">
+    <div class="list">
+        <h1>Admin Activities</h1>
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HotelDetails">Add Hotels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GetHotellist">List of Hotels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UpdateHotels">Update Hotels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GetRegisterUsers">Get Registered Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BookingDetails">Booking Details</a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="image">
+        
+        <img src="https://media.istockphoto.com/id/1193140198/photo/receptionist-and-businesswoman-at-hotel-front-desk.jpg?s=612x612&w=0&k=20&c=VMUzFdFxFIC0AMdqAQjJehZw2vfdfrJ7lQGISBYQnQw=" width="800px;" hight="1200px" margin="2rem" />
+        <img src="https://www.luxuryabode.com/mona/img/hotels.jpg" width="800px;" hight="1200px" ;margin="2rem" />
+    </div>
+</div>

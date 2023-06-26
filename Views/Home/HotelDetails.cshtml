@@ -1,0 +1,63 @@
+﻿@model KSBookingMVC.Models.ListOfHotels
+
+@{
+    ViewData["Title"] = "HotelDetails";
+}
+
+<h1>HotelDetails</h1>
+
+<h4>ListOfHotels</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="HotelDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="HotelsId" class="control-label"></label>
+                <input asp-for="HotelsId" class="form-control" />
+                <span asp-validation-for="HotelsId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Imagelink" class="control-label"></label>
+                <input asp-for="Imagelink" class="form-control" />
+                <span asp-validation-for="Imagelink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hotelname" class="control-label"></label>
+                <input asp-for="Hotelname" class="form-control" />
+                <span asp-validation-for="Hotelname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Place" class="control-label"></label>
+                <input asp-for="Place" class="form-control" />
+                <span asp-validation-for="Place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fromdate" class="control-label"></label>
+                <input asp-for="Fromdate" class="form-control" />
+                <span asp-validation-for="Fromdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Todate" class="control-label"></label>
+                <input asp-for="Todate" class="form-control" />
+                <span asp-validation-for="Todate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Noofperson" class="control-label"></label>
+                <input asp-for="Noofperson" class="form-control" />
+                <span asp-validation-for="Noofperson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

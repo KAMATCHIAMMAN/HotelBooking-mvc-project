@@ -1,0 +1,68 @@
+﻿@model KSBookingMVC.Models.CardDetails
+
+@{
+    ViewData["Title"] = "CardDetails";
+}
+
+<h1>CardDetails</h1>
+
+<h4>CardDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CardDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="CardsId" class="control-label"></label>
+                <input asp-for="CardsId" class="form-control" />
+                <span asp-validation-for="CardsId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameOnCard" class="control-label"></label>
+                <input asp-for="NameOnCard" class="form-control" />
+                <span asp-validation-for="NameOnCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cardnumber" class="control-label"></label>
+                <input asp-for="Cardnumber" class="form-control" />
+                <span asp-validation-for="Cardnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Month" class="control-label"></label>
+                <input asp-for="Month" class="form-control" />
+                <span asp-validation-for="Month" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="year" class="control-label"></label>
+                <input asp-for="year" class="form-control" />
+                <span asp-validation-for="year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cvv" class="control-label"></label>
+                <input asp-for="Cvv" class="form-control" type="Password" />
+                <span asp-validation-for="Cvv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsersId" class="control-label"></label>
+                <input asp-for="UsersId" class="form-control" />
+                <span asp-validation-for="UsersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" asp-controller="Home" asp-action="Index" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

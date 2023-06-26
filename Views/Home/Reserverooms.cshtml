@@ -1,0 +1,52 @@
+﻿@model KSBookingMVC.Models.BookingDetails
+
+@{
+    ViewData["Title"] = "Reserverooms";
+}
+
+<h1>Reserverooms</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Reserverooms">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           @* <div class="form-group">
+                <label asp-for="RoomsId" class="control-label"></label>
+                <input asp-for="RoomsId" class="form-control" />
+                <span asp-validation-for="RoomsId" class="text-danger"></span>
+            </div>
+            *@
+            <div class="form-group">
+                <label asp-for="Hotelname" class="control-label"></label>
+                <input asp-for="Hotelname" class="form-control" />
+                <span asp-validation-for="Hotelname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Noofrooms" class="control-label"></label>
+                <input asp-for="Noofrooms" class="form-control" />
+                <span asp-validation-for="Noofrooms" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="UsersId" class="control-label"></label>
+                <input asp-for="UsersId" class="form-control" />
+                <span asp-validation-for="UsersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
